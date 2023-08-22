@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+
+  #space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i0.wp.com/codemyui.com/wp-content/uploads/2015/10/pure-css-solar-system-animation.gif?fit=880%2C440&ssl=1') no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    animation: zoom 20s infinite alternate;
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  #earth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/02dc4347298545.587638b2a2d24.gif') no-repeat center center;
+    background-size: cover;
+    animation: rotate 15s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #message {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 3s forwards, bounce 3s ease infinite;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  #link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: right;
+  }
+
+  #link a {
+    text-decoration: none;
+    color: #00aaff;
+  }
+
+  #linktree-logo {
+    width: 18px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+</style>
+</head>
+<body>
+  <div id="space"></div>
+  <div id="earth"></div>
+  <div id="message">
+    <p style="color: #f39c12;">🚀 Wishing Success to ISRO 🌕</p>
+    <p style="color: #e74c3c;">for the Chandrayaan-3 Mission! 🛰️</p>
+  </div>
+  <div id="link">
+    <a href="https://linktr.ee/richsid" target="_blank">Connect with me</a>
+    <img id="linktree-logo" src="https://api.blog.production.linktr.ee/wp-content/uploads/2022/06/Avatar-Symbol-Canopy.png" alt="Linktree Logo">
+  </div>
+</body>
+</html>
